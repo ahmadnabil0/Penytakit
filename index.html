@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penyakit Diare - Panduan Lengkap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        nav {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            width: 100%;
+            text-align: left;
+        }
+
+        .menu-toggle:active {
+            background: #764ba2;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #667eea;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s;
+            font-weight: 600;
+            display: block;
+        }
+
+        nav a:hover {
+            background: #667eea;
+            color: white !important;
+            transform: translateY(-2px);
+        }
+
+        .content-card {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content-card h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .content-card h3 {
+            color: #764ba2;
+            font-size: 1.5em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        .content-card p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .content-card ul, .content-card ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        .content-card li {
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            background: #f0f4ff;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .danger-box {
+            background: #f8d7da;
+            border-left: 5px solid #dc3545;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .success-box {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .card-mini {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #667eea;
+        }
+
+        .card-mini h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+        }
+
+        table th {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table tr:hover {
+            background: #f8f9fa;
+        }
+
+        footer {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin: 10px 5px;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                margin-top: 10px;
+            }
+
+            nav ul.active {
+                max-height: 1000px;
+            }
+
+            nav a {
+                text-align: center;
+            }
+
+            .content-card {
+                padding: 20px;
+            }
+
+            .content-card h2 {
+                font-size: 1.5em;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            table th, table td {
+                padding: 8px;
+            }
+        }
+
+        .icon {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .gallery-item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .image-placeholder {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .image-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.1);
+        }
+
+        .placeholder-icon {
+            font-size: 4em;
+            z-index: 1;
+        }
+
+        .placeholder-text {
+            font-size: 1.2em;
+            margin-top: 10px;
+            z-index: 1;
+            font-weight: 600;
+        }
+
+        .image-caption {
+            padding: 20px;
+        }
+
+        .image-caption h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .image-caption p {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .image-placeholder {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏥 Penyakit Diare</h1>
+            <p>Panduan Lengkap: Pengertian, Sejarah, Pencegahan, dan Penanganan</p>
+        </header>
+
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰ Menu Navigasi</button>
+            <ul id="navMenu">
+                <li><a href="#pengertian">Pengertian</a></li>
+                <li><a href="#sejarah">Sejarah</a></li>
+                <li><a href="#jenis">Jenis Diare</a></li>
+                <li><a href="#penyebab">Penyebab</a></li>
+                <li><a href="#gejala">Gejala</a></li>
+                <li><a href="#diagnosis">Diagnosis</a></li>
+                <li><a href="#pengobatan">Pengobatan</a></li>
+                <li><a href="#pencegahan">Pencegahan</a></li>
+                <li><a href="#tempat-berisiko">Tempat Berisiko</a></li>
+                <li><a href="#statistik">Statistik</a></li>
+            </ul>
+        </nav>
+
+        <div class="content-card" id="pengertian">
+            <h2>📖 Pengertian Diare</h2>
+            <p>Diare adalah kondisi medis yang ditandai dengan buang air besar (BAB) yang encer atau cair lebih dari tiga kali dalam sehari. Kondisi ini merupakan respons tubuh terhadap infeksi, keracunan, atau gangguan pada sistem pencernaan.</p>
+            
+            <div class="highlight-box">
+                <h3>Definisi Menurut WHO</h3>
+                <p>Organisasi Kesehatan Dunia (WHO) mendefinisikan diare sebagai kondisi buang air besar dengan konsistensi lembek atau cair, bahkan dapat berupa air saja, dengan frekuensi lebih sering dari biasanya (tiga kali atau lebih) dalam satu hari.</p>
+            </div>
+
+            <h3>Karakteristik Diare</h3>
+            <ul>
+                <li><strong>Frekuensi:</strong> Buang air besar lebih dari 3 kali sehari</li>
+                <li><strong>Konsistensi:</strong> Tinja encer, lembek, atau cair</li>
+                <li><strong>Volume:</strong> Meningkat dari biasanya</li>
+                <li><strong>Durasi:</strong> Dapat berlangsung beberapa hari hingga minggu</li>
+            </ul>
+
+            <h3>Mekanisme Terjadinya Diare</h3>
+            <p>Diare terjadi ketika usus tidak dapat menyerap air dengan baik dari makanan yang dicerna, atau ketika usus mengeluarkan cairan berlebihan. Proses ini dapat dipicu oleh berbagai faktor seperti infeksi bakteri, virus, parasit, atau reaksi terhadap makanan tertentu.</p>
+        </div>
+
+        <div class="content-card" id="sejarah">
+            <h2>📜 Sejarah dan Perkembangan Pengetahuan tentang Diare</h2>
+            
+            <h3>Era Kuno</h3>
+            <p>Catatan medis paling awal tentang diare ditemukan dalam papirus Mesir kuno (sekitar 1500 SM) yang menyebutkan gejala dan pengobatan sederhana menggunakan tanaman obat. Hippocrates (460-370 SM), bapak kedokteran modern, juga mendokumentasikan berbagai kasus diare dan hubungannya dengan kebersihan air.</p>
+
+            <h3>Abad Pertengahan</h3>
+            <p>Selama abad pertengahan, diare dikenal sebagai penyakit "flux" yang sering mewabah dan menyebabkan kematian massal, terutama di wilayah dengan sanitasi buruk. Pada masa ini, pemahaman tentang penyebab diare masih sangat terbatas.</p>
+
+            <h3>Era Modern (Abad 19-20)</h3>
+            <div class="grid-2">
+                <div class="card-mini">
+                    <h4>1854 - John Snow</h4>
+                    <p>Dokter Inggris ini menemukan bahwa wabah kolera (penyebab diare berat) di London disebarkan melalui air yang terkontaminasi. Penemuan ini menjadi tonggak penting dalam epidemiologi modern.</p>
+                </div>
+                <div class="card-mini">
+                    <h4>1880-an - Robert Koch</h4>
+                    <p>Mengidentifikasi bakteri Vibrio cholerae sebagai penyebab kolera, membuka pemahaman baru tentang mikroorganisme penyebab diare.</p>
+                </div>
+                <div class="card-mini">
+                    <h4>1960-an - Oral Rehydration Therapy (ORT)</h4>
+                    <p>Peneliti Bangladesh mengembangkan terapi rehidrasi oral yang revolusioner, menyelamatkan jutaan nyawa di seluruh dunia.</p>
+                </div>
+                <div class="card-mini">
+                    <h4>1970-an - Penemuan Rotavirus</h4>
+                    <p>Ruth Bishop mengidentifikasi rotavirus sebagai penyebab utama diare pada anak-anak.</p>
+                </div>
+            </div>
+
+            <h3>Era Kontemporer (Abad 21)</h3>
+            <p>Saat ini, penelitian tentang diare terus berkembang dengan fokus pada:</p>
+            <ul>
+                <li>Pengembangan vaksin untuk pencegahan (vaksin rotavirus, vaksin kolera)</li>
+                <li>Peningkatan akses air bersih dan sanitasi</li>
+                <li>Probiotik dan mikrobioma usus</li>
+                <li>Terapi antibiotik yang lebih targeted</li>
+                <li>Program kesehatan masyarakat global</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>Catatan Penting:</strong> Meskipun kemajuan medis signifikan, diare masih menjadi penyebab kematian nomor dua pada anak di bawah 5 tahun secara global, menunjukkan pentingnya edukasi dan akses kesehatan.
+            </div>
+        </div>
+
+        <div class="content-card" id="jenis">
+            <h2>🔍 Jenis-Jenis Diare</h2>
+            
+            <h3>1. Berdasarkan Durasi</h3>
+            <table>
+                <tr>
+                    <th>Jenis</th>
+                    <th>Durasi</th>
+                    <th>Karakteristik</th>
+                </tr>
+                <tr>
+                    <td><strong>Diare Akut</strong></td>
+                    <td>Kurang dari 14 hari</td>
+                    <td>Biasanya disebabkan infeksi virus atau bakteri, hilang dengan sendirinya</td>
+                </tr>
+                <tr>
+                    <td><strong>Diare Persisten</strong></td>
+                    <td>14-30 hari</td>
+                    <td>Berlanjut lebih lama dari diare akut, memerlukan evaluasi medis</td>
+                </tr>
+                <tr>
+                    <td><strong>Diare Kronis</strong></td>
+                    <td>Lebih dari 30 hari</td>
+                    <td>Dapat mengindikasikan kondisi medis serius, perlu pemeriksaan menyeluruh</td>
+                </tr>
+            </table>
+
+            <h3>2. Berdasarkan Mekanisme Patofisiologi</h3>
+            <div class="grid-2">
+                <div class="card-mini">
+                    <h4>Diare Osmotik</h4>
+                    <p>Terjadi karena adanya zat yang tidak dapat diserap di usus, menarik air ke lumen usus. Contoh: intoleransi laktosa, konsumsi sorbitol berlebihan.</p>
+                </div>
+                <div class="card-mini">
+                    <h4>Diare Sekretorik</h4>
+                    <p>Usus aktif mengeluarkan air dan elektrolit. Contoh: infeksi kolera, keracunan makanan.</p>
+                </div>
+                <div class="card-mini">
+                    <h4>Diare Eksudatif</h4>
+                    <p>Terjadi kerusakan mukosa usus dengan keluarnya darah, mukus, atau pus. Contoh: disentri, penyakit Crohn.</p>
+                </div>
+                <div class="card-mini">
+                    <h4>Diare Motilitas</h4>
+                    <p>Gangguan pergerakan usus menyebabkan transit makanan terlalu cepat. Contoh: irritable bowel syndrome (IBS).</p>
+                </div>
+            </div>
+
+            <h3>3. Berdasarkan Penyebab</h3>
+            <ul>
+                <li><strong>Diare Infeksi:</strong> Virus (rotavirus, norovirus), bakteri (E. coli, Salmonella, Shigella), parasit (Giardia, Entamoeba)</li>
+                <li><strong>Diare Non-Infeksi:</strong> Intoleransi makanan, efek samping obat, penyakit radang usus, sindrom malabsorpsi</li>
+            </ul>
+        </div>
+
+        <div class="content-card" id="penyebab">
+            <h2>🦠 Penyebab Diare</h2>
+            
+            <h3>1. Penyebab Infeksi</h3>
+            
+            <h4>A. Virus (Paling Umum)</h4>
+            <ul>
+                <li><strong>Rotavirus:</strong> Penyebab utama diare pada bayi dan anak-anak di seluruh dunia</li>
+                <li><strong>Norovirus:</strong> Sering menyebabkan wabah diare di tempat umum (kapal pesiar, sekolah)</li>
+                <li><strong>Adenovirus:</strong> Terutama menyerang anak-anak</li>
+                <li><strong>Astrovirus:</strong> Sering pada bayi dan lansia</li>
+            </ul>
+
+            <h4>B. Bakteri</h4>
+            <ul>
+                <li><strong>Escherichia coli (E. coli):</strong> Terutama strain enterotoksigenik, sering dari makanan/air terkontaminasi</li>
+                <li><strong>Salmonella:</strong> Dari telur mentah, daging unggas yang kurang matang</li>
+                <li><strong>Shigella:</strong> Menyebabkan disentri (diare berdarah)</li>
+                <li><strong>Campylobacter:</strong> Dari daging unggas yang tidak dimasak sempurna</li>
+                <li><strong>Vibrio cholerae:</strong> Penyebab kolera, diare sangat berat</li>
+            </ul>
+
+            <h4>C. Parasit</h4>
+            <ul>
+                <li><strong>Giardia lamblia:</strong> Dari air yang terkontaminasi</li>
+                <li><strong>Entamoeba histolytica:</strong> Penyebab disentri amuba</li>
+                <li><strong>Cryptosporidium:</strong> Resisten terhadap klorin, sering di air kolam renang</li>
+            </ul>
+
+            <h3>2. Penyebab Non-Infeksi</h3>
+            
+            <div class="grid-2">
+                <div class="card-mini">
+                    <h4>Intoleransi & Alergi Makanan</h4>
+                    <ul>
+                        <li>Intoleransi laktosa</li>
+                        <li>Intoleransi fruktosa</li>
+                        <li>Penyakit celiac (gluten)</li>
+                        <li>Alergi makanan tertentu</li>
+                    </ul>
+                </div>
+                <div class="card-mini">
+                    <h4>Obat-obatan</h4>
+                    <ul>
+                        <li>Antibiotik (membunuh bakteri baik)</li>
+                        <li>Antasida yang mengandung magnesium</li>
+                        <li>Obat kemoterapi</li>
+                        <li>Pencahar berlebihan</li>
+                    </ul>
+                </div>
+                <div class="card-mini">
+                    <h4>Penyakit Saluran Cerna</h4>
+                    <ul>
+                        <li>Inflammatory Bowel Disease (IBD)</li>
+                        <li>Irritable Bowel Syndrome (IBS)</li>
+                        <li>Penyakit Crohn</li>
+                        <li>Kolitis ulseratif</li>
+                    </ul>
+                </div>
+                <div class="card-mini">
+                    <h4>Faktor Lain</h4>
+                    <ul>
+                        <li>Operasi usus atau lambung</li>
+                        <li>Diabetes (neuropati diabetik)</li>
+                        <li>Hipertiroidisme</li>
+                        <li>Stres atau kecemasan</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>3. Faktor Risiko</h3>
+            <ul>
+                <li>Kebersihan dan sanitasi buruk</li>
+                <li>Air minum tidak bersih</li>
+                <li>Makanan yang tidak higienis</li>
+                <li>Sistem kekebalan tubuh lemah</li>
+                <li>Malnutrisi</li>
+                <li>Bepergian ke daerah endemis</li>
+                <li>Tidak mencuci tangan dengan benar</li>
+            </ul>
+        </div>
+
+        <div class="content-card" id="gejala">
+            <h2>⚠️ Gejala dan Tanda-Tanda Diare</h2>
+            
+            <h3>Gejala Umum</h3>
+            <ul>
+                <li>Buang air besar encer atau cair lebih dari 3 kali sehari</li>
+                <li>Kram atau nyeri perut</li>
+                <li>Mual dan muntah</li>
+                <li>Demam</li>
+                <li>Kembung</li>
+                <li>Rasa ingin BAB yang mendesak</li>
+                <li>Kehilangan nafsu makan</li>
+            </ul>
+
+            <h3>Gejala Dehidrasi (Komplikasi Serius)</h3>
+            <div class="danger-box">
+                <strong>⚠️ TANDA BAHAYA - Segera ke dokter jika:</strong>
+                <ul>
+                    <li><strong>Pada Bayi dan Anak:</strong>
+                        <ul>
+                            <li>Tidak buang air kecil selama 3 jam atau lebih</li>
+                            <li>Mulut dan lidah kering</li>
+                            <li>Menangis tanpa air mata</li>
+                            <li>Ubun-ubun cekung</li>
+                            <li>Mata cekung</li>
+                            <li>Kulit tidak elastis (dicubit tidak kembali cepat)</li>
+                            <li>Lesu dan tidak responsif</li>
+                            <li>Demam tinggi (>39°C)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Pada Dewasa:</strong>
+                        <ul>
+                            <li>Haus berlebihan</li>
+                            <li>Urin sedikit atau gelap</li>
+                            <li>Kulit kering</li>
+                            <li>Pusing atau kepala ringan</li>
+                            <li>Kelelahan ekstrem</li>
+                            <li>Jantung berdebar</li>
+                            <li>Kebingungan atau disorientasi</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h3>Gejala yang Memerlukan Perhatian Medis Segera</h3>
+            <div class="warning-box">
+                <ul>
+                    <li>Diare berlangsung lebih dari 2 hari tanpa perbaikan</li>
+                    <li>Diare disertai darah atau lendir</li>
+                    <li>Tinja berwarna hitam atau tar (mengindikasikan perdarahan)</li>
+                    <li>Nyeri perut yang sangat parah</li>
+                    <li>Demam tinggi (>38.5°C pada anak, >39°C pada dewasa)</li>
+                    <li>Tanda-tanda dehidrasi berat</li>
+                    <li>Diare pada bayi di bawah 6 bulan</li>
+                    <li>Diare pada lansia atau orang dengan penyakit kronis</li>
+                </ul>
+            </div>
+
+            <h3>Perbedaan Gejala Berdasarkan Penyebab</h3>
+            <table>
+                <tr>
+                    <th>Penyebab</th>
+                    <th>Karakteristik Khusus</th>
+                </tr>
+                <tr>
+                    <td>Infeksi Virus</td>
+                    <td>Diare cair, muntah, demam ringan, berlangsung 1-3 hari</td>
+                </tr>
+                <tr>
+                    <td>Infeksi Bakteri</td>
+                    <td>Dapat disertai darah/lendir, kram parah, demam tinggi</td>
+                </tr>
+                <tr>
+                    <td>Parasit</td>
+                    <td>Diare berkepanjangan, penurunan berat badan, kembung</td>
+                </tr>
+                <tr>
+                    <td>Keracunan Makanan</td>
+                    <td>Onset cepat (2-6 jam setelah makan), muntah hebat</td>
+                </tr>
+                <tr>
+                    <td>Intoleransi Makanan</td>
+                    <td>Gejala muncul setelah konsumsi makanan tertentu, kembung, gas</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="content-card" id="diagnosis">
+            <h2>🔬 Diagnosis Diare</h2>
+            
+            <h3>1. Anamnesis (Wawancara Medis)</h3>
+            <p>Dokter akan menanyakan beberapa hal penting:</p>
+            <ul>
+                <li>Durasi dan frekuensi diare</li>
+                <li>Konsistensi dan warna tinja</li>
+                <li>Adanya darah, lendir, atau makanan yang tidak tercerna</li>
+                <li>Gejala penyerta (demam, muntah, nyeri perut)</li>
+                <li>Riwayat makanan dan minuman yang dikonsumsi</li>
+                <li>Riwayat perjalanan</li>
+                <li>Penggunaan obat-obatan</li>
+                <li>Kontak dengan orang sakit</li>
+                <li>Riwayat penyakit sebelumnya</li>
+            </ul>
+
+            <h3>2. Pemeriksaan Fisik</h3>
+            <p>Dokter akan memeriksa:</p>
+            <ul>
+                <li>Tanda-tanda vital (suhu, nadi, tekanan darah)</li>
+                <li>Tanda-tanda dehidrasi (turgor kulit, mukosa mulut, mata cekung)</li>
+                <li>Pemeriksaan perut (nyeri, distensi, bising usus)</li>
+                <li>Kondisi umum pasien</li>
+            </ul>
+
+            <h3>3. Pemeriksaan Laboratorium</h3>
+            
+            <h4>A. Pemeriksaan Tinja</h4>
+            <table>
+                <tr>
+                    <th>Jenis Pemeriksaan</th>
+                    <th>Tujuan</th>
+                </tr>
+                <tr>
+                    <td><strong>Kultur Tinja</strong></td>
+                    <td>Mengidentifikasi bakteri penyebab (Salmonella, Shigella, Campylobacter)</td>
+                </tr>
+                <tr>
+                    <td><strong>Tes Ova dan Parasit</strong></td>
+                    <td>Mendeteksi telur cacing dan parasit (Giardia, Entamoeba)</td>
+                </tr>
+                <tr>
+                    <td><strong>Tes Toksin</strong></td>
+                    <td>Mendeteksi toksin bakteri (C. difficile)</td>
+                </tr>
+                <tr>
+                    <td><strong>Tes Leukosit Feses</strong></td>
+                    <td>Menunjukkan adanya peradangan atau infeksi bakteri invasif</td>
+                </tr>
+                <tr>
+                    <td><strong>Tes Darah Samar</strong></td>
+                    <td>Mendeteksi perdarahan di saluran cerna</td>
+                </tr>
+            </table>
+
+            <h4>B. Pemeriksaan Darah</h4>
+            <ul>
+                <li><strong>Hitung Darah Lengkap:</strong> Menilai anemia, infeksi</li>
+                <li><strong>Elektrolit:</strong> Menilai ketidakseimbangan akibat dehidrasi</li>
+                <li><strong>Fungsi Ginjal:</strong> Menilai komplikasi dehidrasi</li>
+                <li><strong>C-Reactive Protein (CRP):</strong> Penanda inflamasi</li>
+            </ul>
+
+            <h3>4. Pemeriksaan Penunjang Lanjutan</h3>
+            <p>Bila diperlukan, terutama pada diare kronis:</p>
+            <ul>
+                <li><strong>Kolonoskopi:</strong> Melihat kondisi usus besar secara langsung</li>
+                <li><strong>Endoskopi:</strong> Memeriksa saluran cerna atas</li>
+                <li><strong>Tes Intoleransi Makanan:</strong> Tes hidrogen napas untuk intoleransi laktosa</li>
+                <li><strong>CT Scan atau MRI Abdomen:</strong> Untuk kasus yang kompleks</li>
+                <li><strong>Biopsi:</strong> Mengambil sampel jaringan usus</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h3>Kapan Pemeriksaan Laboratorium Diperlukan?</h3>
+                <ul>
+                    <li>Diare berat atau berkepanjangan (>1 minggu)</li>
+                    <li>Adanya darah atau lendir dalam tinja</li>
+                    <li>Demam tinggi</li>
+                    <li>Tanda-tanda dehidrasi berat</li>
+                    <li>Pasien imunokompromais</li>
+                    <li>Wabah diare di komunitas</li>
+                    <li>Riwayat perjalanan ke daerah endemis</li>
+                    <li>Tidak ada perbaikan dengan pengobatan awal</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-card" id="pengobatan">
+            <h2>💊 Pengobatan dan Penanganan Diare</h2>
+            
+            <h3>1. Terapi Rehidrasi</h3>
+            <p>Penggantian cairan adalah kunci utama pengobatan diare:</p>
+            
+            <h4>A. Oral Rehydration Solution (ORS) / Oralit</h4>
+            <div class="success-box">
+                <h4>Komposisi Oralit WHO:</h4>
+                <ul>
+                    <li>Natrium klorida: 2,6 gram</li>
+                    <li>Kalium klorida: 1,5 gram</li>
+                    <li>Glukosa: 13,5 gram</li>
+                    <li>Trisodium citrate: 2,9 gram</li>
+                    <li>Dilarutkan dalam 1 liter air bersih</li>
+                </ul>
+                <p><strong>Cara Pemberian:</strong></p>
+                <ul>
+                    <li>Anak < 2 tahun: 50-100 ml setiap kali BAB</li>
+                    <li>Anak 2-10 tahun: 100-200 ml setiap kali BAB</li>
+                    <li>Anak > 10 tahun & dewasa: 200-300 ml setiap kali BAB</li>
+                    <li>Diberikan sedikit demi sedikit dengan sendok</li>
+                </ul>
+            </div>
+
+            <h4>B. Alternatif Oralit Buatan Rumah</h4>
+            <p>Jika oralit tidak tersedia:</p>
+            <ul>
+                <li>1 liter air matang</li>
+                <li>8 sendok teh gula pasir</li>
+                <li>1 sendok teh garam</li>
+                <li>Dapat ditambahkan air jeruk untuk rasa dan kalium</li>
+            </ul>
+
+            <h4>C. Infus (Cairan Intravena)</h4>
+            <p>Diberikan jika:</p>
+            <ul>
+                <li>Dehidrasi berat</li>
+                <li>Pasien tidak bisa minum (muntah terus)</li>
+                <li>Kesadaran menurun</li>
+                <li>Syok</li>
+            </ul>
+
+            <h3>2. Terapi Nutrisi</h3>
+            <div class="grid-2">
+                <div class="card-mini">
+                    <h4>Yang Dianjurkan</h4>
+                    <ul>
+                        <li>Tetap makan normal (tidak perlu puasa)</li>
+                        <li>Makanan tinggi karbohidrat (nasi, roti, kentang)</li>
+                        <li>Protein mudah cerna (ayam rebus, ikan)</li>
+                        <li>Pisang (kalium)</li>
+                        <li>Sup ayam</li>
+                        <li>Yogurt dengan probiotik</li>
+                        <li>ASI tetap diberikan pada bayi</li>
+                    </ul>
+                </div>
+                <div class="card-mini">
+                    <h4>Yang Harus Dihindari</h4>
+                    <ul>
+                        <li>Makanan berlemak tinggi</li>
+                        <li>Makanan pedas</li>
+                        <li>Makanan tinggi serat kasar</li>
+                        <li>Susu sapi (sementara)</li>
+                        <li>Minuman berkafein</li>
+                        <li>Minuman berkarbonasi</li>
+                        <li>Alkohol</li>
+                        <li>Permen karet</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>3. Terapi Obat-obatan</h3>
+            
+            <h4>A. Zink</h4>
+            <div class="highlight-box">
+                <strong>Sangat penting untuk anak!</strong>
+                <ul>
+                    <li>Anak < 6 bulan: 10 mg/hari selama 10-14 hari</li>
+                    <li>Anak ≥ 6 bulan: 20 mg/hari selama 10-14 hari</li>
+                    <li>Manfaat: Mengurangi durasi dan keparahan diare, mencegah episode berikutnya</li>
+                </ul>
+            </div>
+
+            <h4>B. Probiotik</h4>
+            <ul>
+                <li>Lactobacillus rhamnosus GG</li>
+                <li>Saccharomyces boulardii</li>
+                <li>Bifidobacterium</li>
+                <li><strong>Manfaat:</strong> Memulihkan flora usus normal, mengurangi durasi diare</li>
+            </ul>
+
+            <h4>C. Antibiotik</h4>
+            <p><strong>⚠️ HANYA diberikan jika ada indikasi spesifik:</strong></p>
+            <ul>
+                <li>Diare berdarah (disentri)</li>
+                <li>Kolera</li>
+                <li>Infeksi parasit (Giardia, Entamoeba)</li>
+                <li>Diare persisten dengan hasil kultur positif</li>
+                <li>Pasien imunokompromais</li>
+            </ul>
+            <p><strong>Contoh:</strong> Ciprofloxacin, Azithromycin, Metronidazole (sesuai penyebab)</p>
+
+            <h4>D. Antidiare</h4>
+            <table>
+                <tr>
+                    <th>Obat</th>
+                    <th>Cara Kerja</th>
+                    <th>Catatan</th>
+                </tr>
+                <tr>
+                    <td><strong>Loperamide</strong></td>
+                    <td>Memperlambat gerakan usus</td>
+                    <td>Tidak untuk anak < 6 tahun, diare berdarah, atau demam tinggi</td>
+                </tr>
+                <tr>
+                    <td><strong>Bismuth subsalicylate</strong></td>
+                    <td>Anti-inflamasi, antibakteri ringan</td>
+                    <td>Dapat membuat tinja hitam (normal)</td>
+                </tr>
+                <tr>
+                    <td><strong>Racecadotril</strong></td>
+                    <td>Mengurangi sekresi cairan usus</td>
+                    <td>Lebih aman, bisa untuk anak</td>
+                </tr>
+            </table>
+
+            <h4>E. Obat Simptomatik</h4>
+            <ul>
+                <li><strong>Antiemetik:</strong> Jika muntah berlebihan (domperidone, ondansetron)</li>
+                <li><strong>Antipiretik:</strong> Jika demam (paracetamol)</li>
+                <li><strong>Antispasmodik:</strong> Jika kram perut parah</li>
+            </ul>
+
+            <h3>4. Penanganan Komplikasi</h3>
+            <ul>
+                <li><strong>Dehidrasi berat:</strong> Rawat inap, cairan IV</li>
+                <li><strong>Gangguan elektrolit:</strong> Koreksi kalium, natrium</li>
+                <li><strong>Syok:</strong> ICU, resusitasi cairan agresif</li>
+                <li><strong>Gagal ginjal akut:</strong> Hemodialisis jika perlu</li>
+            </ul>
+
+            <div class="warning-box">
+                <h3>⚠️ Hal-hal yang TIDAK Boleh Dilakukan:</h3>
+                <ul>
+                    <li>Menghentikan pemberian makan/minum</li>
+                    <li>Memberikan antibiotik tanpa indikasi</li>
+                    <li>Memberikan obat antidiare untuk anak kecil tanpa konsultasi</li>
+                    <li>Memberikan obat antidiare jika ada demam tinggi atau darah dalam tinja</li>
+                    <li>Mengabaikan tanda-tanda dehidrasi</li>
+                </ul>
+            </div>
+
+            <h3>5. Pengobatan Tradisional (Komplementer)</h3>
+            <p>Beberapa pengobatan tradisional yang dapat membantu (sebagai pendamping, bukan pengganti):</p>
+            <ul>
+                <li><strong>Air kelapa muda:</strong> Rehidrasi alami, elektrolit</li>
+                <li><strong>Teh chamomile:</strong> Anti-inflamasi, menenangkan</li>
+                <li><strong>Kayu manis:</strong> Antimikroba</li>
+                <li><strong>Jahe:</strong> Mengurangi mual</li>
+                <li><strong>Daun jambu biji:</strong> Adstringen, antimikroba</li>
+            </ul>
+
+            <div class="danger-box">
+                <strong>⚠️ SEGERA KE RUMAH SAKIT JIKA:</strong>
+                <ul>
+                    <li>Tanda dehidrasi berat</li>
+                    <li>Diare lebih dari 3 hari tanpa perbaikan</li>
+                    <li>Demam tinggi (>39°C)</li>
+                    <li>Darah atau lendir dalam jumlah banyak</li>
+                    <li>Nyeri perut sangat hebat</li>
+                    <li>Muntah terus-menerus</li>
+                    <li>Kesadaran menurun</li>
+                    <li>Bayi < 6 bulan dengan diare</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-card" id="pencegahan">
+            <h2>🛡️ Pencegahan Diare</h2>
+            
+            <h3>1. Kebersihan Tangan</h3>
+            <div class="success-box">
+                <h4>6 Langkah Cuci Tangan yang Benar (WHO):</h4>
+                <ol>
+                    <li>Basahi tangan dengan air mengalir</li>
+                    <li>Tuangkan sabun secukupnya</li>
+                    <li>Gosok telapak dengan telapak</li>
+                    <li>Gosok punggung tangan dan sela jari</li>
+                    <li>Gosok ujung jari dan kuku</li>
+                    <li>Bilas dengan air mengalir, keringkan</li>
+                </ol>
+                <p><strong>Waktu penting cuci tangan:</strong></p>
+                <ul>
+                    <li>Sebelum makan dan menyiapkan makanan</li>
+                    <li>Setelah dari toilet</li>
+                    <li>Setelah mengganti popok</li>
+                    <li>Setelah menyentuh hewan</li>
+                    <li>Setelah membuang sampah</li>
+                    <li>Sebelum menyusui atau memberi makan bayi</li>
+                </ul>
+            </div>
+
+            <h3>2. Kebersihan Makanan dan Minuman</h3>
+            
+            <h4>A. Prinsip "5 Kunci Keamanan Pangan" (WHO)</h4>
+            <div class="grid-2">
+                <div class="card-mini">
+                    <h4>1. Jaga Kebersihan</h4>
+                    <ul>
+                        <li>Cuci tangan sebelum memasak</li>
+                        <li>Bersihkan permukaan dapur</li>
+                        <li>Lindungi area dapur dari serangga</li>
+                    </ul>
+                </div>
+                <div class="card-mini">
+                    <h4>2. Pisahkan Mentah & Matang</h4>
+                    <ul>
+                        <li>Talenan terpisah</li>
+                        <li>Simpan daging mentah terpisah</li>
+                        <li>Jangan campur dalam wadah sama</li>
+                    </ul>
+                </div>
+                <div class="card-mini">
+                    <h4>3. Masak dengan Sempurna</h4>
+                    <ul>
+                        <li>Suhu internal 70°C minimal</li>
+                        <li>Daging tidak berwarna merah muda</li>
+                        <li>Panaskan kembali hingga mendidih</li>
+                    </ul>
+                </div>
+                <div class="card-mini">
+                    <h4>4. Simpan pada Suhu Aman</h4>
+                    <ul>
+                        <li>Dinginkan makanan dengan cepat</li>
+                        <li>Jangan simpan di suhu ruang >2 jam</li>
+                        <li>Kulkas di bawah 5°C</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h4>B. Tips Keamanan Air</h4>
+            <ul>
+                <li>Minum air yang sudah dimasak/direbus</li>
+                <li>Gunakan air kemasan dari sumber terpercaya</li>
+                <li>Hindari es batu dari sumber tidak jelas</li>
+                <li>Sikat gigi dengan air bersih</li>
+                <li>Cuci buah dan sayur dengan air mengalir</li>
+            </ul>
+
+            <h3>3. Sanitasi dan Lingkungan</h3>
+            <ul>
+                <li>Gunakan jamban yang bersih dan memadai</li>
+                <li>Buang tinja bayi dengan benar (tidak ke sungai/sembarang tempat)</li>
+                <li>Kelola sampah dengan baik</li>
+                <li>Jaga kebersihan lingkungan rumah</li>
+                <li>Tutup makanan dari lalat dan serangga</li>
+                <li>Bersihkan dan desinfeksi toilet secara rutin</li>
+            </ul>
+
+            <h3>4. Vaksinasi</h3>
+            <table>
+                <tr>
+                    <th>Vaksin</th>
+                    <th>Penyakit yang Dicegah</th>
+                    <th>Jadwal</th>
+                </tr>
+                <tr>
+                    <td><strong>Vaksin Rotavirus</strong></td>
+                    <td>Diare rotavirus (penyebab utama diare berat pada anak)</td>
+                    <td>Usia 6-14 minggu (dosis 1), interval 4-10 minggu (dosis 2-3)</td>
+                </tr>
+                <tr>
+                    <td><strong>Vaksin Kolera</strong></td>
+                    <td>Kolera</td>
+                    <td>Untuk bepergian ke daerah endemis</td>
+                </tr>
+                <tr>
+                    <td><strong>Vaksin Hepatitis A</strong></td>
+                    <td>Hepatitis A (dapat menyebabkan diare)</td>
+                    <td>Usia 1 tahun, booster 6-12 bulan kemudian</td>
+                </tr>
+            </table>
+
+            <h3>5. Praktik Menyusui</h3>
+            <div class="highlight-box">
+                <h4>ASI Eksklusif untuk Bayi</h4>
+                <ul>
+                    <li>ASI eksklusif 6 bulan pertama</li>
+                    <li>Dilanjutkan dengan MPASI hingga 2 tahun</li>
+                    <li>ASI mengandung antibodi pelindung</li>
+                    <li>Mengurangi risiko diare hingga 50%</li>
+                </ul>
+            </div>
+
+            <h3>6. Edukasi dan Kesadaran</h3>
+            <ul>
+                <li>Kenali gejala dan tanda bahaya diare</li>
+                <li>Ketahui cara membuat dan memberikan oralit</li>
+                <li>Ajari anak-anak cuci tangan yang benar</li>
+                <li>Pahami pentingnya melanjutkan pemberian makan saat diare</li>
+                <li>Jangan self-medication dengan antibiotik</li>
+            </ul>
+
+            <h3>7. Pencegahan saat Bepergian</h3>
+            <div class="warning-box">
+                <strong>Tips untuk "Traveler's Diarrhea":</strong>
+                <ul>
+                    <li>Hindari air keran dan es batu</li>
+                    <li>Makan makanan yang baru dimasak dan masih panas</li>
+                    <li>Hindari salad mentah, buah yang sudah dikupas</li>
+                    <li>Hindari makanan dari pedagang kaki lima yang kurang higienis</li>
+                    <li>Bawa hand sanitizer</li>
+                    <li>Bawa oralit dan obat-obatan dasar</li>
+                    <li>Pertimbangkan vaksinasi sebelum bepergian</li>
+                </ul>
+            </div>
+
+            <h3>8. Program Pemerintah</h3>
+            <p>Indonesia memiliki beberapa program pencegahan diare:</p>
+            <ul>
+                <li><strong>Program STBM</strong> (Sanitasi Total Berbasis Masyarakat)</li>
+                <li><strong>Program Penyediaan Air Bersih</strong></li>
+                <li><strong>Program Imunisasi Nasional</strong> (termasuk vaksin rotavirus)</li>
+                <li><strong>Program Pemberian Zinc</strong> pada balita dengan diare</li>
+                <li><strong>Promosi ASI Eksklusif</strong></li>
+                <li><strong>Gerakan Masyarakat Hidup Sehat (GERMAS)</strong></li>
+            </ul>
+        </div>
+
+        <div class="content-card" id="tempat-berisiko">
+            <h2>⚠️ Tempat-Tempat yang Berpotensi Menyebabkan Diare</h2>
+            
+            <p>Berikut adalah beberapa tempat atau kondisi lingkungan yang berpotensi tinggi menjadi sumber penularan diare. Kenali tempat-tempat ini agar kita bisa lebih waspada dan menjaga kebersihan:</p>
+
+            <div class="image-gallery">
+                <div class="gallery-item">
+                  <div class="image-placeholder" style="background: none; padding: 0;">
+                        <img src="https://media.istockphoto.com/photos/dirty-toilet-in-public-building-by-human-walk-picture-id1188425302?k=6&m=1188425302&s=612x612&w=0&h=uY3aaOhFeHTsrLVtptPr5V8EC4FF18iznMT9xQz99bo=" alt="Toilet Umum" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="image-caption">
+                        <h4>Toilet Umum yang Kotor</h4>
+                        <p>Toilet yang tidak terawat dan jarang dibersihkan menjadi sarang bakteri penyebab diare seperti E. coli dan Shigella.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                   <div class="image-placeholder" style="background: none; padding: 0;">
+                        <img src="data:image/jpeg;base64,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" alt="Toilet Umum" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="image-caption">
+                        <h4>Sumber Air Tercemar</h4>
+                        <p>Sungai, sumur, atau air yang terkontaminasi limbah dapat mengandung berbagai mikroorganisme penyebab diare.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="image-placeholder" style="background: none; padding: 0;">
+                        <img src="https://awsimages.detik.net.id/community/media/visual/2019/07/29/b88eff04-35fd-49c2-b8af-1bf2209ac0e0.jpeg?w=600&q=90" alt="Toilet Umum" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="image-caption">
+                        <h4>Pedagang Kaki Lima Tidak Higienis</h4>
+                        <p>Makanan yang dijual di tempat terbuka tanpa penutup dan peralatan kotor dapat terkontaminasi bakteri.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="image-placeholder" style="background: none; padding: 0;">
+                        <img src="https://sabangmeraukenews.com/foto_berita/2024/07/2024-07-28-miris-pasar-arengka-pekanbaru-kini-jadi-tempat-pembuangan-sampah-kotor-dan-bikin-jijik.379" alt="Toilet Umum" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="image-caption">
+                        <h4>Tempat Pembuangan Sampah Terbuka</h4>
+                        <p>TPA atau tempat sampah yang tidak terkelola menarik lalat dan hewan pembawa kuman penyebab diare.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="image-placeholder" style="background: none; padding: 0;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2EM1cE_q_0OF9aIx2B3o15Q7n96egwxiQQo4HnyK7iQ&s" alt="Toilet Umum" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="image-caption">
+                        <h4>Kolam atau Genangan Air Kotor</h4>
+                        <p>Genangan air hujan atau kolam yang tercemar dapat menjadi tempat berkembangbiaknya parasit seperti Giardia.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="image-placeholder" style="background: none; padding: 0;">
+                        <img src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/100/2023/10/24/25-Kondisi-Pasar-Ikan-Mayangan-Becek-dan-Kotor-akibat-Selokan-yang-Mampetrif1-2458134150.jpg" alt="Toilet Umum" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="image-caption">
+                        <h4>Pasar Tradisional Basah</h4>
+                        <p>Pasar dengan sanitasi buruk, lantai becek, dan makanan mentah berserakan dapat menjadi sumber kontaminasi silang.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="warning-box" style="margin-top: 30px;">
+                <h3>💡 Tips Menghindari Risiko di Tempat-Tempat Ini:</h3>
+                <ul>
+                    <li>Selalu cuci tangan dengan sabun setelah dari toilet umum</li>
+                    <li>Gunakan hand sanitizer jika tidak ada air bersih</li>
+                    <li>Hindari minum air dari sumber yang tidak jelas</li>
+                    <li>Pilih tempat makan yang bersih dan higienis</li>
+                    <li>Jangan berenang atau bermain di genangan air kotor</li>
+                    <li>Cuci bersih sayuran dan buah dari pasar sebelum dikonsumsi</li>
+                    <li>Masak makanan hingga matang sempurna</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-card" id="statistik">
+            <h2>📊 Statistik dan Data Diare</h2>
+            
+            <h3>Statistik Global</h3>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">1,7 Miliar</div>
+                    <div class="stat-label">Kasus diare per tahun di dunia</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">525.000</div>
+                    <div class="stat-label">Kematian anak balita per tahun akibat diare</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2nd</div>
+                    <div class="stat-label">Penyebab kematian terbanyak pada anak di bawah 5 tahun</div>
+                </div>
+            </div>
+
+            <h3>Prevalensi Berdasarkan Usia</h3>
+            <table>
+                <tr>
+                    <th>Kelompok Usia</th>
+                    <th>Rata-rata Episode per Tahun</th>
+                    <th>Catatan</th>
+                </tr>
+                <tr>
+                    <td>Bayi (< 1 tahun)</td>
+                    <td>3-5 episode</td>
+                    <td>Paling rentan, sistem imun belum sempurna</td>
+                </tr>
+                <tr>
+                    <td>Balita (1-5 tahun)</td>
+                    <td>2-3 episode</td>
+                    <td>Kelompok risiko tinggi</td>
+                </tr>
+                <tr>
+                    <td>Anak (6-18 tahun)</td>
+                    <td>1-2 episode</td>
+                    <td>Menurun seiring pertambahan usia</td>
+                </tr>
+                <tr>
+                    <td>Dewasa</td>
+                    <td>0,5-1 episode</td>
+                    <td>Lebih rendah, imunitas lebih baik</td>
+                </tr>
+                <tr>
+                    <td>Lansia (> 65 tahun)</td>
+                    <td>1-2 episode</td>
+                    <td>Risiko meningkat, komplikasi lebih berat</td>
+                </tr>
+            </table>
+
+            <h3>Data Indonesia</h3>
+            <p>Berdasarkan data Kementerian Kesehatan RI (Riskesdas):</p>
+            <ul>
+                <li><strong>Prevalensi diare:</strong> 6-8% per tahun pada balita</li>
+                <li><strong>Insiden diare:</strong> Sekitar 270 juta kasus per tahun</li>
+                <li><strong>Kematian:</strong> Diare masuk 5 besar penyakit penyebab kematian bayi dan balita</li>
+                <li><strong>Wilayah endemis:</strong> Papua, NTT, Maluku, dan beberapa wilayah dengan akses air bersih terbatas</li>
+            </ul>
+
+            <h3>Penyebab Diare di Indonesia</h3>
+            <div class="grid-2">
+                <div class="card-mini">
+                    <h4>Penyebab Infeksi</h4>
+                    <ul>
+                        <li>Rotavirus: 40-50%</li>
+                        <li>E. coli: 20-30%</li>
+                        <li>Shigella: 10-15%</li>
+                        <li>Lainnya: 15-20%</li>
+                    </ul>
+                </div>
+                <div class="card-mini">
+                    <h4>Faktor Risiko Utama</h4>
+                    <ul>
+                        <li>Sanitasi buruk: 60%</li>
+                        <li>Air tidak bersih: 50%</li>
+                        <li>Hygiene rendah: 40%</li>
+                        <li>Malnutrisi: 30%</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Dampak Ekonomi</h3>
+            <ul>
+                <li><strong>Biaya langsung:</strong> Pengobatan, rawat inap (rata-rata Rp 500.000 - 2.000.000 per episode)</li>
+                <li><strong>Biaya tidak langsung:</strong> Kehilangan produktivitas orang tua, absen sekolah/kerja</li>
+                <li><strong>Beban kesehatan:</strong> Sekitar 2-3% dari total beban penyakit nasional</li>
+            </ul>
+
+            <h3>Tren dan Proyeksi</h3>
+            <div class="highlight-box">
+                <h4>Kabar Baik:</h4>
+                <ul>
+                    <li>Angka kematian diare menurun 50% sejak tahun 2000</li>
+                    <li>Cakupan vaksinasi rotavirus meningkat</li>
+                    <li>Program air bersih dan sanitasi diperluas</li>
+                    <li>Edukasi masyarakat meningkat</li>
+                </ul>
+                <h4>Tantangan yang Masih Ada:</h4>
+                <ul>
+                    <li>Masih banyak wilayah dengan akses sanitasi terbatas</li>
+                    <li>Kesenjangan antara kota dan desa</li>
+                    <li>Resistensi antibiotik meningkat</li>
+                    <li>Perubahan iklim dapat meningkatkan kasus</li>
+                </ul>
+            </div>
+
+            <h3>Target Global (SDGs)</h3>
+            <p>Sustainable Development Goals untuk 2030:</p>
+            <ul>
+                <li>Mengakhiri kematian yang dapat dicegah pada bayi dan balita</li>
+                <li>Menurunkan angka kematian balita menjadi ≤ 25 per 1.000 kelahiran hidup</li>
+                <li>Akses universal ke air bersih dan sanitasi layak</li>
+                <li>Meningkatkan cakupan vaksinasi hingga 90%</li>
+            </ul>
+        </div>
+
+        <footer>
+            <h2>📚 Kesimpulan</h2>
+            <p style="margin-bottom: 20px; text-align: justify;">Diare adalah masalah kesehatan yang serius namun dapat dicegah dan diobati. Kunci utamanya adalah <strong>pencegahan</strong> melalui kebersihan, sanitasi yang baik, dan vaksinasi. Jika terjadi diare, penanganan yang tepat dan cepat, terutama <strong>rehidrasi</strong>, dapat mencegah komplikasi berbahaya.</p>
+            
+            <div class="warning-box">
+                <h3>⚠️ Pesan Penting:</h3>
+                <ul>
+                    <li>Jangan pernah meremehkan diare, terutama pada bayi dan anak-anak</li>
+                    <li>Waspadai tanda-tanda dehidrasi</li>
+                    <li>Jangan ragu untuk segera mencari pertolongan medis jika kondisi memburuk</li>
+                    <li>Pencegahan lebih baik dan lebih murah daripada pengobatan</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                <h3 style="color: #667eea;">Referensi:</h3>
+                <ol style="text-align: left;">
+                    <li>World Health Organization (WHO) - Diarrhoeal Disease Fact Sheets</li>
+                    <li>Kementerian Kesehatan Republik Indonesia - Pedoman Pengendalian Diare</li>
+                    <li>UNICEF - Diarrhoea: Why children are still dying and what can be done</li>
+                    <li>Centers for Disease Control and Prevention (CDC) - Diarrhea Guidelines</li>
+                    <li>Riset Kesehatan Dasar (Riskesdas) Indonesia</li>
+                    <li>Ikatan Dokter Anak Indonesia (IDAI) - Panduan Tatalaksana Diare Akut</li>
+                    <li>The Lancet - Global Burden of Childhood Diarrhea</li>
+                </ol>
+            </div>
+
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 2px solid #667eea;">
+                <p style="font-size: 0.9em; color: #666;">
+                    Website ini dibuat untuk keperluan akademis (Tugas UTS Perkuliahan)<br>
+                    Materi: Penyakit Diare<br>
+                    © 2026 - Semua informasi berdasarkan sumber terpercaya dan literatur medis<br>
+                    Web ini dibuaut Oleh Kelompk 3. 6A<br>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Fungsi toggle menu untuk mobile
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Tutup menu saat link diklik (mobile)
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                
+                // Tutup menu di mobile
+                if (window.innerWidth <= 768) {
+                    document.getElementById('navMenu').classList.remove('active');
+                }
+            });
+        });
+
+        // Animasi saat scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.content-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s, transform 0.5s';
+            observer.observe(card);
+        });
+
+        // Highlight menu aktif saat scroll
+        window.addEventListener('scroll', function() {
+            let current = '';
+            document.querySelectorAll('.content-card').forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('nav a').forEach(link => {
+                link.style.background = '';
+                link.style.color = '';
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.style.background = '#667eea';
+                    link.style.color = 'white';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
